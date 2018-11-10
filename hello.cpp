@@ -8,6 +8,7 @@ CONTRACT hello : public eosio::contract {
 
       ACTION hi( name user ) {
 	      print_f( "Hello % from hello", user );
+	      require_recipient( user );
 	  }
 };
 
